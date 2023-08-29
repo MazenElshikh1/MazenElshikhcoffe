@@ -121,6 +121,9 @@ $(document).ready(function() {
   // Handle checkout button click event
   $('.buttonCheckout').on('click', function() {
     // Retrieve order details
+          var fullName = $('#product.name').val();
+    var fullName = $('#product.quantity').val();
+
     var fullName = $('#name').val();
     var phoneNumber = $('#phone').val();
     var address = $('#address').val();
@@ -140,7 +143,7 @@ $(document).ready(function() {
     var encodedMessage = encodeURIComponent(message);
 
     // Replace the following WhatsApp number with your desired recipient number
-    var whatsappNumber = '1234567890';
+    var whatsappNumber = '1007276757';
 
     // Construct the WhatsApp URL
     var whatsappURL = 'https://api.whatsapp.com/send?phone=' + whatsappNumber + '&text=' + encodedMessage;
